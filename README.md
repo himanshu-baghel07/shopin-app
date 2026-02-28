@@ -1,36 +1,184 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shop-In App 🛍️
 
-## Getting Started
+A modern e-commerce product catalog application built with Next.js 16, React 19, Redux Toolkit, and Tailwind CSS. Browse products, filter by categories, search, sort, and manage your favorites with a beautiful and responsive interface.
 
-First, run the development server:
+## 📸 Screenshots
+
+### Desktop View
+
+![Desktop Screenshot](https://i.postimg.cc/bvccTS8H/web.png)
+
+### Mobile View
+
+![Mobile Screenshot](https://iili.io/qqdXMru.png)
+
+## ✨ Features
+
+- **Product Catalog**: Browse a wide range of products from the FakeStore API
+- **Advanced Filtering**:
+  - Search products by name
+  - Filter by category
+  - Filter by minimum rating
+  - Sort by price, rating, or name (ascending/descending)
+- **Favorites System**: Mark products as favorites and view them separately
+- **Responsive Design**: Fully responsive layout that works on desktop, tablet, and mobile
+- **Modern UI**: Clean and intuitive interface with smooth animations
+- **State Management**: Redux Toolkit for efficient state management
+- **Type Safety**: Built with TypeScript for better developer experience
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **UI Library**: [React 19](https://react.dev/)
+- **State Management**: [Redux Toolkit](https://redux-toolkit.js.org/)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **HTTP Client**: [Axios](https://axios-http.com/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Package Manager**: [pnpm](https://pnpm.io/)
+
+## 📋 Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- Node.js 20.x or higher
+- pnpm (recommended) or npm/yarn
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
 
 ```bash
+git clone <your-repository-url>
+cd shop-in-app
+```
+
+### 2. Install dependencies
+
+```bash
+pnpm install
+# or
+npm install
+# or
+yarn install
+```
+
+### 3. Set up environment variables
+
+Create a `.env` file in the root directory:
+
+```env
+NEXT_PUBLIC_API_URL=https://fakestoreapi.com
+```
+
+### 4. Run the development server
+
+```bash
+pnpm dev
+# or
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `pnpm dev` - Start the development server
+- `pnpm build` - Build the application for production
+- `pnpm start` - Start the production server
+- `pnpm lint` - Run ESLint to check code quality
 
-## Learn More
+## 📁 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+shop-in-app/
+├── app/                      # Next.js App Router pages
+│   ├── products/            # Products page
+│   ├── layout.tsx           # Root layout
+│   └── page.tsx             # Home page
+├── components/              # React components
+│   ├── filters/            # Filter components
+│   ├── product/            # Product-related components
+│   └── Header.tsx          # Header component
+├── hooks/                   # Custom React hooks
+│   ├── useFavorites.ts     # Favorites management
+│   ├── useFetchCategories.ts
+│   └── useFetchProducts.ts
+├── lib/                     # Library code
+│   ├── features/           # Redux slices
+│   ├── store.ts            # Redux store configuration
+│   └── StoreProvider.tsx   # Redux provider
+├── types/                   # TypeScript type definitions
+│   └── product.ts
+└── public/                  # Static assets
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎯 Key Features Explained
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Filtering System
 
-## Deploy on Vercel
+The app uses Redux Toolkit to manage filter state, allowing users to:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Search products by title
+- Filter by product category
+- Filter by minimum rating (3+, 4+, or all)
+- Sort by price, rating, or name
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Favorites Management
+
+- Click the heart icon on any product to add/remove from favorites
+- Toggle "Show Favorites Only" to view your saved products
+- Favorites are persisted in localStorage
+
+### Responsive Design
+
+- Mobile-first approach with Tailwind CSS
+- Adaptive grid layout for different screen sizes
+- Sticky filter bar for easy access while scrolling
+
+## 🌐 API Integration
+
+This app uses the [FakeStore API](https://fakestoreapi.com/) for product data:
+
+- `GET /products` - Fetch all products
+- `GET /products/categories` - Fetch all categories
+- `GET /products/category/{category}` - Fetch products by category
+
+## 🚢 Deployment
+
+### Deploy on Vercel
+
+The easiest way to deploy this Next.js app is using [Vercel](https://vercel.com):
+
+1. Push your code to GitHub
+2. Import your repository on Vercel
+3. Configure environment variables
+4. Deploy!
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/shop-in-app)
+
+### Other Platforms
+
+You can also deploy to:
+
+- [Netlify](https://www.netlify.com/)
+- [Railway](https://railway.app/)
+- [AWS Amplify](https://aws.amazon.com/amplify/)
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 👨‍💻 Author
+
+Built with ❤️ using Next.js and React
+
+---
+
+**Note**: This is a demo application using the FakeStore API for educational purposes.
