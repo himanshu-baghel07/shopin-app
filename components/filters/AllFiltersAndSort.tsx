@@ -37,9 +37,11 @@ export function AllFiltersAndSort({
           value={search}
           onChange={(value) => dispatch(setSearch(value))}
         />
-            <button
+        <button
           onClick={onToggleFavorites}
-          title={showFavoritesOnly ? "Show all products" : "Show favorites only"}
+          title={
+            showFavoritesOnly ? "Show all products" : "Show favorites only"
+          }
           className={`inline-flex md:hidden w-fit items-center justify-center gap-2 h-10 px-3 rounded-md border text-sm font-medium transition-colors
             ${
               showFavoritesOnly
@@ -72,11 +74,13 @@ export function AllFiltersAndSort({
           value={sort}
           onChange={(value) => dispatch(setSort(value))}
         />
-      
+
         {/* Favorites toggle button */}
         <button
           onClick={onToggleFavorites}
-          title={showFavoritesOnly ? "Show all products" : "Show favorites only"}
+          title={
+            showFavoritesOnly ? "Show all products" : "Show favorites only"
+          }
           className={`hidden md:inline-flex w-fit items-center justify-center gap-2 h-10 px-3 rounded-md border text-sm font-medium transition-colors
             ${
               showFavoritesOnly

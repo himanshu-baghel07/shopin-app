@@ -58,7 +58,7 @@ export default function ProductsPage() {
 
   return (
     <div className=" mx-auto  py-8">
-      <div className="sticky top-16 z-50 bg-transparent backdrop-blur-2xl px-4  py-2">
+      <div className="sticky top-16 z-50 bg-[#0a0a0a] backdrop-blur-3xl px-4  py-2">
         <AllFiltersAndSort
           categories={categories}
           showFavoritesOnly={showFavoritesOnly}
