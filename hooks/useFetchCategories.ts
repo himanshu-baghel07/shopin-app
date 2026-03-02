@@ -10,7 +10,7 @@ export const useFetchCategories = () => {
       try {
         setLoading(true);
         const response = await fetch(
-          "https://dummyjson.com/products/category-list",
+          `${process.env.NEXT_PUBLIC_API_URL}/products/category-list`,
         );
         if (!response.ok) {
           throw new Error("Failed to fetch categories");

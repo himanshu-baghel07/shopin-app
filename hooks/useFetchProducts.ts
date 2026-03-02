@@ -41,7 +41,7 @@ export default function useFetchProducts(
 
     try {
       const url = buildUrl(
-        process.env.NEXT_PUBLIC_API_URL!,
+        process.env.NEXT_PUBLIC_API_URL!, // https://dummyjson.com
         searchQuery,
         category,
         skipRef.current,
