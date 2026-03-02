@@ -159,26 +159,3 @@ The easiest way to deploy this Next.js app is using [Vercel](https://vercel.com)
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/shop-in-app)
 
-### Other Platforms
-
-You can also deploy to:
-
-- [Netlify](https://www.netlify.com/)
-- [Railway](https://railway.app/)
-- [AWS Amplify](https://aws.amazon.com/amplify/)
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 👨‍💻 Author
-
-Built with ❤️ using Next.js and React
-
----
-
-**Note**: This is a demo application using the FakeStore API for educational purposes.
